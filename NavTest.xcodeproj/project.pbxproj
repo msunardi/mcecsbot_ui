@@ -79,6 +79,7 @@
 		3A7FF5CF16DC042B003D9EDA /* ece_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A7FF5CE16DC042B003D9EDA /* ece_logo.png */; };
 		3A7FF5D216DC5BB4003D9EDA /* FacultyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FF5D116DC5BB4003D9EDA /* FacultyDetailViewController.m */; };
 		3A97790D16ED4DDC002D7B32 /* app_icon_psu_logomark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A97790C16ED4DDB002D7B32 /* app_icon_psu_logomark.png */; };
+		3AA5B4C417AC848200CCB433 /* InteractionLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B4C317AC848200CCB433 /* InteractionLandscapeViewController.m */; };
 		3ACACC5016CB18AD002ACF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACACC4F16CB18AD002ACF77 /* UIKit.framework */; };
 		3ACACC5216CB18AD002ACF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACACC5116CB18AD002ACF77 /* Foundation.framework */; };
 		3ACACC5416CB18AD002ACF77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACACC5316CB18AD002ACF77 /* CoreGraphics.framework */; };
@@ -112,6 +113,7 @@
 		3AD36E1816DC9800008DFC25 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD36E1616DC9800008DFC25 /* AudioToolbox.framework */; };
 		3AD36E1916DC9800008DFC25 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD36E1716DC9800008DFC25 /* AVFoundation.framework */; };
 		3AD36E1C16DC989B008DFC25 /* SpeechRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD36E1B16DC989A008DFC25 /* SpeechRecognitionViewController.m */; };
+		3AD7DEDB17AC6FFC002246F2 /* InteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7DEDA17AC6FFC002246F2 /* InteractionViewController.m */; };
 		3ADB9FC016FBDC53006A521B /* psu_mcecs_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADB9FBF16FBDC53006A521B /* psu_mcecs_header.png */; };
 		3AE25D2716E17DBF00F4105C /* graphene_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE25D2616E17DBF00F4105C /* graphene_bg.png */; };
 		3AE25D2916E1956000F4105C /* stack_buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE25D2816E1956000F4105C /* stack_buttons.png */; };
@@ -270,6 +272,8 @@
 		3A7FF5D016DC5BB4003D9EDA /* FacultyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacultyDetailViewController.h; sourceTree = "<group>"; };
 		3A7FF5D116DC5BB4003D9EDA /* FacultyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacultyDetailViewController.m; sourceTree = "<group>"; };
 		3A97790C16ED4DDB002D7B32 /* app_icon_psu_logomark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_psu_logomark.png; sourceTree = "<group>"; };
+		3AA5B4C217AC848200CCB433 /* InteractionLandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractionLandscapeViewController.h; sourceTree = "<group>"; };
+		3AA5B4C317AC848200CCB433 /* InteractionLandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractionLandscapeViewController.m; sourceTree = "<group>"; };
 		3ACACC4B16CB18AD002ACF77 /* NavTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACACC4F16CB18AD002ACF77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3ACACC5116CB18AD002ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -311,6 +315,8 @@
 		3AD36E1716DC9800008DFC25 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3AD36E1A16DC989A008DFC25 /* SpeechRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognitionViewController.h; sourceTree = "<group>"; };
 		3AD36E1B16DC989A008DFC25 /* SpeechRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechRecognitionViewController.m; sourceTree = "<group>"; };
+		3AD7DED917AC6FFC002246F2 /* InteractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractionViewController.h; sourceTree = "<group>"; };
+		3AD7DEDA17AC6FFC002246F2 /* InteractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractionViewController.m; sourceTree = "<group>"; };
 		3ADB9FBF16FBDC53006A521B /* psu_mcecs_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = psu_mcecs_header.png; path = "../../../../Dropbox/MCECSBOT Database/psu_mcecs_header.png"; sourceTree = "<group>"; };
 		3AE25D2616E17DBF00F4105C /* graphene_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graphene_bg.png; sourceTree = "<group>"; };
 		3AE25D2816E1956000F4105C /* stack_buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stack_buttons.png; sourceTree = "<group>"; };
@@ -552,6 +558,10 @@
 				3ACACC5F16CB18AD002ACF77 /* NavTestAppDelegate.m */,
 				3ACACC5616CB18AD002ACF77 /* Supporting Files */,
 				3ACACC6C16CB18DA002ACF77 /* Storyboard.storyboard */,
+				3AA5B4C217AC848200CCB433 /* InteractionLandscapeViewController.h */,
+				3AA5B4C317AC848200CCB433 /* InteractionLandscapeViewController.m */,
+				3AD7DED917AC6FFC002246F2 /* InteractionViewController.h */,
+				3AD7DEDA17AC6FFC002246F2 /* InteractionViewController.m */,
 				3AE25D4D16E1D73500F4105C /* WelcomeViewController.h */,
 				3AE25D4E16E1D73500F4105C /* WelcomeViewController.m */,
 				3AE25D3416E19C7800F4105C /* MainMenuViewController.h */,
@@ -878,6 +888,8 @@
 				3AE25D4F16E1D73500F4105C /* WelcomeViewController.m in Sources */,
 				3AE25D6116E1E95600F4105C /* DirectoryViewController.m in Sources */,
 				3A0921D317AC5941009E408A /* EceTabPersonViewController.m in Sources */,
+				3AD7DEDB17AC6FFC002246F2 /* InteractionViewController.m in Sources */,
+				3AA5B4C417AC848200CCB433 /* InteractionLandscapeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

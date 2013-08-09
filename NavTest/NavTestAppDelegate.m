@@ -7,8 +7,15 @@
 //
 
 #import "NavTestAppDelegate.h"
+#import "DDLog.h"
+#import "DDTTYLogger.h"
+
+// Log levels: off, error, warn, info, verbose
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation NavTestAppDelegate
+
+@synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -16,6 +23,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];*/
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     return YES;
 }
 

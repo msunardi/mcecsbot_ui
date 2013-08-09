@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+NSInputStream * inputStream;
+NSOutputStream * outputStream;
 
-@interface InteractionViewController : UIViewController
+@interface InteractionViewController : UIViewController <NSStreamDelegate, UIWebViewDelegate> {
+    //UIWebView *webView;
+    IBOutlet UIWebView *webView;
+}
 
-@property (weak, nonatomic) IBOutlet UIView *portraitView;
-@property (weak, nonatomic) IBOutlet UIView *landscapeView;
+@property (assign, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)stopButton:(id)sender;
+- (IBAction)speechSwitch:(id)sender;
+@property (assign, nonatomic) NSString *chatServer;
+
 @end

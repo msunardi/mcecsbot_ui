@@ -42,5 +42,18 @@
          landmarkName = "-gridView:didSelectItemAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavTest/InteractionViewController.m"
+         timestampString = "397427673.936465"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "@implementation InteractionViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

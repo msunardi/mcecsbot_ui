@@ -179,6 +179,17 @@
 		3AED27AD17C5CDE4008BCCA7 /* head_icon_multi2_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27A417C5CDE4008BCCA7 /* head_icon_multi2_on.png */; };
 		3AED27AE17C5CDE4008BCCA7 /* stop_sign_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27A517C5CDE4008BCCA7 /* stop_sign_off.png */; };
 		3AED27AF17C5CDE4008BCCA7 /* stop_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27A617C5CDE4008BCCA7 /* stop_sign.png */; };
+		3AED27B617C6F4B9008BCCA7 /* wall_following_icon_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27B217C6F4B9008BCCA7 /* wall_following_icon_off.png */; };
+		3AED27B717C6F4B9008BCCA7 /* wall_following_icon_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27B317C6F4B9008BCCA7 /* wall_following_icon_on.png */; };
+		3AED27BA17C6F8A7008BCCA7 /* speech_icon_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27B817C6F8A7008BCCA7 /* speech_icon_off.png */; };
+		3AED27BB17C6F8A7008BCCA7 /* speech_icon_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27B917C6F8A7008BCCA7 /* speech_icon_on.png */; };
+		3AED27BD17C7F4B0008BCCA7 /* speech_icon_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27BC17C7F4B0008BCCA7 /* speech_icon_active.png */; };
+		3AED27BF17C83CC2008BCCA7 /* Awb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED27BE17C83CC2008BCCA7 /* Awb.framework */; };
+		3AED27C517C83CDE008BCCA7 /* Awb8k.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED27C017C83CDD008BCCA7 /* Awb8k.framework */; };
+		3AED27C617C83CDE008BCCA7 /* Kal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED27C117C83CDD008BCCA7 /* Kal.framework */; };
+		3AED27C717C83CDE008BCCA7 /* Kal16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED27C217C83CDD008BCCA7 /* Kal16.framework */; };
+		3AED27C817C83CDE008BCCA7 /* Rms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED27C317C83CDD008BCCA7 /* Rms.framework */; };
+		3AED27C917C83CDE008BCCA7 /* Rms8k.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED27C417C83CDD008BCCA7 /* Rms8k.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -418,6 +429,17 @@
 		3AED27A417C5CDE4008BCCA7 /* head_icon_multi2_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = head_icon_multi2_on.png; path = ../../../../Pictures/mcecsbot_ui/head_icon_multi2_on.png; sourceTree = "<group>"; };
 		3AED27A517C5CDE4008BCCA7 /* stop_sign_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_sign_off.png; path = ../../../../Pictures/mcecsbot_ui/stop_sign_off.png; sourceTree = "<group>"; };
 		3AED27A617C5CDE4008BCCA7 /* stop_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_sign.png; path = ../../../../Pictures/mcecsbot_ui/stop_sign.png; sourceTree = "<group>"; };
+		3AED27B217C6F4B9008BCCA7 /* wall_following_icon_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall_following_icon_off.png; path = ../../../../Pictures/mcecsbot_ui/wall_following_icon_off.png; sourceTree = "<group>"; };
+		3AED27B317C6F4B9008BCCA7 /* wall_following_icon_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall_following_icon_on.png; path = ../../../../Pictures/mcecsbot_ui/wall_following_icon_on.png; sourceTree = "<group>"; };
+		3AED27B817C6F8A7008BCCA7 /* speech_icon_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_icon_off.png; path = ../../../../Pictures/mcecsbot_ui/speech_icon_off.png; sourceTree = "<group>"; };
+		3AED27B917C6F8A7008BCCA7 /* speech_icon_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_icon_on.png; path = ../../../../Pictures/mcecsbot_ui/speech_icon_on.png; sourceTree = "<group>"; };
+		3AED27BC17C7F4B0008BCCA7 /* speech_icon_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_icon_active.png; path = ../../../../Pictures/mcecsbot_ui/speech_icon_active.png; sourceTree = "<group>"; };
+		3AED27BE17C83CC2008BCCA7 /* Awb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awb.framework; path = ../openearsextras/FliteVoices/Awb.framework; sourceTree = "<group>"; };
+		3AED27C017C83CDD008BCCA7 /* Awb8k.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awb8k.framework; path = ../openearsextras/FliteVoices/Awb8k.framework; sourceTree = "<group>"; };
+		3AED27C117C83CDD008BCCA7 /* Kal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kal.framework; path = ../openearsextras/FliteVoices/Kal.framework; sourceTree = "<group>"; };
+		3AED27C217C83CDD008BCCA7 /* Kal16.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kal16.framework; path = ../openearsextras/FliteVoices/Kal16.framework; sourceTree = "<group>"; };
+		3AED27C317C83CDD008BCCA7 /* Rms.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rms.framework; path = ../openearsextras/FliteVoices/Rms.framework; sourceTree = "<group>"; };
+		3AED27C417C83CDD008BCCA7 /* Rms8k.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rms8k.framework; path = ../openearsextras/FliteVoices/Rms8k.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +447,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AED27C517C83CDE008BCCA7 /* Awb8k.framework in Frameworks */,
+				3AED27C617C83CDE008BCCA7 /* Kal.framework in Frameworks */,
+				3AED27C717C83CDE008BCCA7 /* Kal16.framework in Frameworks */,
+				3AED27C817C83CDE008BCCA7 /* Rms.framework in Frameworks */,
+				3AED27C917C83CDE008BCCA7 /* Rms8k.framework in Frameworks */,
+				3AED27BF17C83CC2008BCCA7 /* Awb.framework in Frameworks */,
 				3AD36E1816DC9800008DFC25 /* AudioToolbox.framework in Frameworks */,
 				3AD36E1916DC9800008DFC25 /* AVFoundation.framework in Frameworks */,
 				3A7D3B1216D80B81004662A1 /* QuartzCore.framework in Frameworks */,
@@ -629,6 +657,12 @@
 		3ACACC4E16CB18AD002ACF77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AED27C017C83CDD008BCCA7 /* Awb8k.framework */,
+				3AED27C117C83CDD008BCCA7 /* Kal.framework */,
+				3AED27C217C83CDD008BCCA7 /* Kal16.framework */,
+				3AED27C317C83CDD008BCCA7 /* Rms.framework */,
+				3AED27C417C83CDD008BCCA7 /* Rms8k.framework */,
+				3AED27BE17C83CC2008BCCA7 /* Awb.framework */,
 				3AD36E1616DC9800008DFC25 /* AudioToolbox.framework */,
 				3AD36E1716DC9800008DFC25 /* AVFoundation.framework */,
 				3A7D3B1116D80B81004662A1 /* QuartzCore.framework */,
@@ -707,6 +741,11 @@
 		3ACACC5616CB18AD002ACF77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AED27BC17C7F4B0008BCCA7 /* speech_icon_active.png */,
+				3AED27B817C6F8A7008BCCA7 /* speech_icon_off.png */,
+				3AED27B917C6F8A7008BCCA7 /* speech_icon_on.png */,
+				3AED27B217C6F4B9008BCCA7 /* wall_following_icon_off.png */,
+				3AED27B317C6F4B9008BCCA7 /* wall_following_icon_on.png */,
 				3AED279E17C5CDE4008BCCA7 /* hand_icons_followhand_off.png */,
 				3AED279F17C5CDE4008BCCA7 /* hand_icons_followhand_on.png */,
 				3AED27A017C5CDE4008BCCA7 /* hand_icons_trackhand_off.png */,
@@ -978,6 +1017,11 @@
 				3AED27AD17C5CDE4008BCCA7 /* head_icon_multi2_on.png in Resources */,
 				3AED27AE17C5CDE4008BCCA7 /* stop_sign_off.png in Resources */,
 				3AED27AF17C5CDE4008BCCA7 /* stop_sign.png in Resources */,
+				3AED27B617C6F4B9008BCCA7 /* wall_following_icon_off.png in Resources */,
+				3AED27B717C6F4B9008BCCA7 /* wall_following_icon_on.png in Resources */,
+				3AED27BA17C6F8A7008BCCA7 /* speech_icon_off.png in Resources */,
+				3AED27BB17C6F8A7008BCCA7 /* speech_icon_on.png in Resources */,
+				3AED27BD17C7F4B0008BCCA7 /* speech_icon_active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,6 +1157,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../openearsextras/FliteVoices\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NavTest/NavTest-Prefix.pch";
@@ -1132,6 +1177,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../openearsextras/FliteVoices\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NavTest/NavTest-Prefix.pch";

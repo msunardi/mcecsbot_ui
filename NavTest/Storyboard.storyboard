@@ -914,14 +914,6 @@ Maseeh College of Engineering and Computer Science</string>
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="gate_top.png" id="fkH-xe-Nd1">
-                                <rect key="frame" x="0.0" y="-67" width="768" height="614"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="gate_bottom.png" id="aod-AK-Z0n">
-                                <rect key="frame" x="0.0" y="460" width="768" height="569"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ony-gr-rx9">
                                 <rect key="frame" x="659" y="824" width="89" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -983,12 +975,11 @@ Maseeh College of Engineering and Computer Science</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="6Hm-u4-TA8">
-                                <rect key="frame" x="399" y="507" width="349" height="178"/>
+                                <rect key="frame" x="140" y="739" width="489" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
-                                <color key="backgroundColor" red="0.60553284190000001" green="0.68111582849999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <size key="titleShadowOffset" width="3" height="0.0"/>
-                                <state key="normal" title="ABOUT ME">
+                                <state key="normal" title="ABOUT ME" backgroundImage="stack_buttons_3_3.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1000,12 +991,11 @@ Maseeh College of Engineering and Computer Science</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="UdH-YB-b3N">
-                                <rect key="frame" x="399" y="274" width="349" height="178"/>
+                                <rect key="frame" x="140" y="460" width="489" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
-                                <color key="backgroundColor" red="0.60553284190000001" green="0.68111582849999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <size key="titleShadowOffset" width="3" height="2"/>
-                                <state key="normal" title="CHAT WITH ME!">
+                                <state key="normal" title="CHAT WITH ME!" backgroundImage="stack_buttons_1_3.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1017,12 +1007,11 @@ Maseeh College of Engineering and Computer Science</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="T28-eR-C0w">
-                                <rect key="frame" x="20" y="507" width="349" height="178"/>
+                                <rect key="frame" x="140" y="599" width="489" height="159"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
-                                <color key="backgroundColor" red="0.60553284190000001" green="0.68111582849999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <size key="titleShadowOffset" width="3" height="2"/>
-                                <state key="normal" title="FACULTY, LABS and OFFICES">
+                                <state key="normal" title="FACULTY, LABS and OFFICES" backgroundImage="stack_buttons_2_3.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1034,12 +1023,11 @@ Maseeh College of Engineering and Computer Science</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Tm6-W3-Lkm">
-                                <rect key="frame" x="20" y="274" width="349" height="178"/>
+                                <rect key="frame" x="140" y="322" width="489" height="159"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
-                                <color key="backgroundColor" red="0.60553284190000001" green="0.68111582849999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <size key="titleShadowOffset" width="3" height="2"/>
-                                <state key="normal" title="MESSAGE FROM THE DEAN">
+                                <state key="normal" title="HELLO FROM THE DEAN" backgroundImage="stack_buttons_0_3.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1065,12 +1053,20 @@ Maseeh College of Engineering and Computer Science</string>
                                 </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="leR-qf-hJx">
-                                <rect key="frame" x="323" y="418" width="123" height="123"/>
+                                <rect key="frame" x="323" y="178" width="123" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="psu_mcecs_header.png" id="jtO-Xd-aeA">
                                 <rect key="frame" x="64" y="20" width="640" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="gate_top.png" id="fkH-xe-Nd1">
+                                <rect key="frame" x="0.0" y="-67" width="768" height="614"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="gate_bottom.png" id="aod-AK-Z0n">
+                                <rect key="frame" x="0.0" y="460" width="768" height="569"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1172,26 +1168,26 @@ Maseeh College of Engineering and Computer Science</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hand_icons_trackhand_off.png" id="2bO-vh-D5X">
-                                <rect key="frame" x="64" y="798" width="90" height="90"/>
+                                <rect key="frame" x="77" y="801" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hand_icons_followhand_off.png" id="joT-9K-78l">
-                                <rect key="frame" x="162" y="798" width="90" height="90"/>
+                                <rect key="frame" x="175" y="801" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="stop_sign_off.png" id="zvp-cn-bF2">
-                                <rect key="frame" x="260" y="798" width="90" height="90"/>
+                                <rect key="frame" x="273" y="801" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Base Movement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nu6-UB-GEN">
-                                <rect key="frame" x="575" y="822" width="123" height="21"/>
+                                <rect key="frame" x="567" y="811" width="123" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.34869408610000002" green="0.48849588630000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TJm-V8-htM">
-                                <rect key="frame" x="575" y="851" width="120" height="30"/>
+                                <rect key="frame" x="567" y="840" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -1213,7 +1209,7 @@ Maseeh College of Engineering and Computer Science</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="head_icon_multi2_off.png" id="tvR-ia-F6B">
-                                <rect key="frame" x="358" y="798" width="90" height="90"/>
+                                <rect key="frame" x="371" y="801" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="qd0-5b-TTL">
@@ -1223,20 +1219,28 @@ Maseeh College of Engineering and Computer Science</string>
                                     <action selector="speechRecognitionSwitchFlip:" destination="PRu-v0-cak" eventType="valueChanged" id="ff0-Wr-5mb"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M87-1A-1vI">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Speech Recognizer status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M87-1A-1vI">
                                 <rect key="frame" x="210" y="531" width="494" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HSJ-EA-b8J">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Responses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HSJ-EA-b8J">
                                 <rect key="frame" x="210" y="585" width="494" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="speech_icon_off.png" id="OR9-JD-WRR">
+                                <rect key="frame" x="81" y="710" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wall_following_icon_off.png" id="aac-CY-0H0">
+                                <rect key="frame" x="459" y="801" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1249,11 +1253,13 @@ Maseeh College of Engineering and Computer Science</string>
                         <outlet property="instructionLabel" destination="PX3-Xw-Qky" id="OJm-Tu-XYJ"/>
                         <outlet property="obstacleLight" destination="zvp-cn-bF2" id="lg8-4E-hcF"/>
                         <outlet property="personDetectedLight" destination="tvR-ia-F6B" id="IZu-CK-kEc"/>
+                        <outlet property="speechLight" destination="OR9-JD-WRR" id="cMp-e1-Q4m"/>
                         <outlet property="speechRecognitionSwitch" destination="qd0-5b-TTL" id="QxN-DQ-wZS"/>
                         <outlet property="speechStatus" destination="M87-1A-1vI" id="DDn-nO-3zO"/>
                         <outlet property="textLabel" destination="HSJ-EA-b8J" id="oH0-m3-HjI"/>
                         <outlet property="theWebView" destination="BKR-Bi-DMp" id="O1B-5S-rPi"/>
                         <outlet property="videoFrame" destination="dVq-1m-aiz" id="iIV-II-Z5v"/>
+                        <outlet property="wallFollowingLight" destination="aac-CY-0H0" id="G0O-MK-BXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xr9-Z8-G1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1272,10 +1278,13 @@ Maseeh College of Engineering and Computer Science</string>
         <image name="head_icon_multi2_off.png" width="100" height="100"/>
         <image name="psu_mcecs_header.png" width="564" height="100"/>
         <image name="robotface.jpg" width="990" height="1500"/>
+        <image name="speech_icon_off.png" width="100" height="100"/>
         <image name="stack_buttons_0_3.png" width="640" height="178"/>
         <image name="stack_buttons_1_3.png" width="640" height="178"/>
         <image name="stack_buttons_2_3.png" width="640" height="178"/>
+        <image name="stack_buttons_3_3.png" width="640" height="178"/>
         <image name="stop_sign_off.png" width="100" height="100"/>
+        <image name="wall_following_icon_off.png" width="100" height="100"/>
     </resources>
     <classes>
         <class className="AQGridView" superclassName="UIScrollView">
@@ -1407,11 +1416,13 @@ Maseeh College of Engineering and Computer Science</string>
                 <relationship kind="outlet" name="instructionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="obstacleLight" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="personDetectedLight" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="speechLight" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="speechRecognitionSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="speechStatus" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="theWebView" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="videoFrame" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="wallFollowingLight" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="SpeechRecognitionViewController" superclassName="UIViewController">

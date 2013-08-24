@@ -18,11 +18,15 @@
 
 LanguageModelGenerator *lmGenerator;
 NSArray *words;
+NSArray *faculty_names;
+NSArray *default_responses;
 NSString *name;
 NSError *err;
 NSDictionary *languageGeneratorResults;
 NSString *lmPath;
 NSString *dicPath;
+BOOL *speechMode;
+BOOL *speechModeActive;
 
 ///// ======= END OF OPENEARS STUFF ===== ////
 
@@ -37,6 +41,13 @@ NSString *dicPath;
 
 @synthesize pocketsphinxController;
 @synthesize openEarsEventsObserver;
+
+@synthesize fliteController;
+@synthesize slt;
+@synthesize kal;
+@synthesize awb;
+@synthesize rms;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,7 +84,9 @@ NSString *dicPath;
     @try {
         
         lmGenerator = [[LanguageModelGenerator alloc]init];
-        words = [NSArray arrayWithObjects:@"HELLO", @"HELLO WORLD", @"COMPUTER", @"COFFEE", @"GOOD MORNING", @"ROBOTICS LAB", @"PORTLAND", @"I AM HAPPY", @"INTERESTING", @"I DO NOT KNOW", @"THE DEAN", @"RUNNING AROUND", @"ONE TWO THREE FOUR FIVE SIX SEVEN EIGHT NINE TEN", @"I BEG YOUR PARDON", nil];
+        words = [NSArray arrayWithObjects:@"HELLO", @"HELLO WORLD", @"COMPUTER", @"COFFEE", @"GOOD MORNING", @"ROBOTICS LAB", @"PORTLAND", @"I AM HAPPY", @"INTERESTING", @"I DO NOT KNOW", @"THE DEAN", @"RUNNING AROUND", @"ONE TWO THREE FOUR FIVE SIX SEVEN EIGHT NINE TEN", @"I BEG YOUR PARDON", @"HELLO JEEVES", @"SO LONG JEEVES", @"GOODBYE JEEVES", @"WHO IS", @"Douglas Hall", @"James McNames", @"Marek Perkowski", @"Mark Faust", @"Lisa Zurk", @"Robert Daasch", nil];
+        faculty_names = [NSArray arrayWithObjects:@"Douglas Hall", @"James McNames", @"Marek Perkowski", @"Mark Faust", @"Lisa Zurk", @"Robert Daasch", nil];
+        default_responses = [NSArray arrayWithObjects:@"I beg your pardon?", @"Yeah ...", @"Sorry, I don't know what to respond to that", @"My circuits are itching", @"Nice weather, huh?"];
         name = @"MyLanguageModelFile";
         err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name];
         languageGeneratorResults = nil;
@@ -110,14 +123,16 @@ NSString *dicPath;
     [self setInstructionLabel:nil];
     [self setPersonDetectedLight:nil];
     [self setSpeechRecognitionSwitch:nil];
+    [self setSpeechLight:nil];
+    [self setWallFollowingLight:nil];
     [super viewDidUnload];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    //[self initNetworkCommunication:[NSString stringWithFormat:@"jeeves.dnsdynamic.com"]];
+    [self initNetworkCommunication:[NSString stringWithFormat:@"jeeves.dnsdynamic.com"]];
     //[self initNetworkCommunication:[NSString stringWithFormat:@"10.39.243.151"]];
-    [self initNetworkCommunication:[NSString stringWithFormat:@"127.0.0.1"]];
+    //[self initNetworkCommunication:[NSString stringWithFormat:@"127.0.0.1"]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -243,6 +258,9 @@ NSString *dicPath;
     NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
     [outputStream write:[data bytes] maxLength:[data length]];
     
+    response = [NSString stringWithFormat:@"ipad:ip:%@", ipAddress];
+    data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
+    [outputStream write:[data bytes] maxLength:[data length]];
     // Then greet user
     //NSString *welcome = [NSString stringWithFormat:@"msg:Hello, %@",self.userName];
     //NSData *newdata = [[NSData alloc] initWithData:[welcome dataUsingEncoding:NSASCIIStringEncoding]];
@@ -263,7 +281,7 @@ NSString *dicPath;
 - (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)eventCode {
     NSError* error;
     
-    NSLog(@"stream event %i", eventCode);
+    //NSLog(@"stream event %i", eventCode);
     
     switch (eventCode) {
         case NSStreamEventOpenCompleted:
@@ -295,7 +313,7 @@ NSString *dicPath;
                              // 1) Get the latest loan
                              NSDictionary* loan = [latestLoans objectAtIndex:0];
                              NSString *message = [NSString stringWithFormat:@"id: %@, name: %@", [loan objectForKey:@"id"],[loan objectForKey:@"name"]];*/
-                            NSLog(@"Server said: %@", output);
+                            //NSLog(@"Server said: %@", output);
                                                         
                             NSData *data = [output dataUsingEncoding:NSUTF8StringEncoding];
                             NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
@@ -306,7 +324,7 @@ NSString *dicPath;
                             
                             NSString *botclient = [json objectForKey:@"client"]; //2                            
                             
-                            NSLog(@"client: %@", botclient); //3
+                            //NSLog(@"client: %@", botclient); //3
                             
                             if (botclient == (NSString*)[NSNull null]) {
                                 [theWebView loadHTMLString:[self formatOutput:output] baseURL:nil];
@@ -380,6 +398,11 @@ NSString *dicPath;
                                 } else {
                                     inputMode = @"No input detected. Say \"Hello\" or raise a hand to interact.";
                                 }
+                                /*if (speechMode) {
+                                    if (speechModeActive) [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_active.png"]];
+                                    else [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_on.png"]];
+                                }
+                                else [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_off.png"]];*/
                                 
                                 // Current action status of robot
                                 NSDictionary* status_currentaction = [status_array objectAtIndex:4];
@@ -433,6 +456,9 @@ NSString *dicPath;
                                 
                                 if ([followwallflag isEqualToString:@"true"]) {
                                     [[self instructionLabel] setText:@"WARNING: Automatic navigation engaged.\nPlease stay clear off my path or feel my wrath. Thank you."];
+                                    [[self wallFollowingLight] setImage:[UIImage imageNamed:@"wall_following_icon_on.png"]];
+                                } else {
+                                    [[self wallFollowingLight] setImage:[UIImage imageNamed:@"wall_following_icon_off.png"]];
                                 }
                                 
                                 // Check for user detection status
@@ -440,12 +466,12 @@ NSString *dicPath;
                                 NSArray* users_array = [status_users objectForKey:@"users"];
                                 NSDictionary* users_content = [users_array objectAtIndex:0];
                                 NSString* users_detected = [users_content objectForKey:@"detected"];
-                                NSLog(@"user flag: %@\n",users_detected);
+                                //NSLog(@"user flag: %@\n",users_detected);
                                 if ([users_detected isEqualToString:@"true"]) {
                                     //users_detected = @"No obstacle detected";
                                     
                                     NSString *multiple_users_detected = [users_content objectForKey:@"multiple"];
-                                    NSLog(@"multple users flag: %@\n",multiple_users_detected);
+                                    //NSLog(@"multple users flag: %@\n",multiple_users_detected);
                                     if ([multiple_users_detected isEqualToString:@"true"]) {
                                         [[self personDetectedLight] setImage:[UIImage imageNamed:@"head_icon_multi2_on.png"]];
                                         [[self instructionLabel] setText:@"Now this is a party!"];
@@ -606,6 +632,8 @@ withFilterContext:(id)filterContext
         [self.openEarsEventsObserver setDelegate:nil];
         [self.speechStatus setText:@"Speech Recognition is off."];
         [self.textLabel setText:@"..."];
+        speechMode = NO;
+        [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_off.png"]];
     }
 }
 
@@ -625,20 +653,74 @@ withFilterContext:(id)filterContext
 
 - (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
 	NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
-    [self.speechStatus setText:@"I think you said:"];
+    [self.speechStatus setText:[NSString stringWithFormat:@"I think you said: %@ (%@)", hypothesis, recognitionScore]];
+    NSInteger *response_id = arc4random_uniform([default_responses count]);
+    NSString *toSay = [default_responses objectAtIndex:response_id];
     
     NSPredicate *predicate;
     predicate = [NSPredicate predicateWithFormat:@"self contains[cd] %@",hypothesis];
     
-    if ([predicate evaluateWithObject:@"I AM HAPPY"]) {
+    if ([predicate evaluateWithObject:@"I AM HAPPY"] && speechModeActive) {
         [self.textLabel setText:@"YOU DON'T SAY!"];
+        //[self.fliteController say:@"HELLO THERE" withVoice:self.awb];
+        toSay = @"YOU DON'T SAY!";
     }
     else if ([predicate evaluateWithObject:@"I BEG YOUR PARDON"]) {
-        [self.textLabel setText:[NSString stringWithFormat:@"%@?",hypothesis]];
+        //[self.textLabel setText:[NSString stringWithFormat:@"%@?",hypothesis]];
+    }
+    else if ([predicate evaluateWithObject:@"HELLO JEEVES"] || [predicate evaluateWithObject:@"JEEVES"]) {
+        [self.textLabel setText:@"HI THERE!"];
+        
+        //[self.fliteController say:@"HELLO THERE" withVoice:self.awb];
+        toSay = @"HELLO THERE";
+
+        speechModeActive = YES;
+        [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_active.png"]];
+    }
+    else if ([predicate evaluateWithObject:@"GOODBYE"] || [predicate evaluateWithObject:@"SO LONG JEEVES"]) {
+        [self.textLabel setText:@"GOODBYE, HUMAN"];
+        //[self.fliteController say:@"GOODBYE, HUMAN" withVoice:self.awb];
+        toSay = @"A GOOD DAY TO YOU";
+        [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_on.png"]];
+        speechModeActive = NO;
+    }
+    else if (!speechMode) {
+        [self.textLabel setText:@"Say 'Hello, Jeeves' to start"];
     }
     else {
         [self.textLabel setText:hypothesis];
+        //NSArray *foo = [hypothesis componentsSeparatedByString: @"/"];
+        /*if (([predicate evaluateWithObject:@"GOODBYE"] || [predicate evaluateWithObject:@"SO LONG JEEVES"]) && speechModeActive) {
+            [self.textLabel setText:@"GOODBYE, HUMAN"];
+            [self.fliteController say:@"A GOOD DAY TO YOU" withVoice:self.awb];
+            [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_on.png"]];
+            speechModeActive = NO;
+            return;
+        }*/
+        for (NSString *faculty in faculty_names) {
+            NSPredicate *predicate;
+            predicate = [NSPredicate predicateWithFormat:@"self contains[cd] %@", faculty];
+            if ([predicate evaluateWithObject:hypothesis]) {
+                NSLog(@"Found Match!");
+                [[self textLabel] setText:[NSString stringWithFormat:@"You asked for %@", faculty]];
+                //[self.fliteController say:[NSString stringWithFormat:@"You asked for %@", faculty] withVoice:self.awb];
+                toSay = [NSString stringWithFormat:@"You asked for %@", faculty];
+                break;
+            } else {
+                NSLog(@"No match!");
+            }
+        }
+        
+        NSLog(@"Blah!");
+        
     }
+    
+    [self.fliteController say:toSay withVoice:self.rms];
+    /*
+    else {
+        [self.textLabel setText:hypothesis];
+        NSLog(@"default output");
+    }*/
 }
 
 - (void) pocketsphinxDidStartCalibration {
@@ -649,12 +731,15 @@ withFilterContext:(id)filterContext
 - (void) pocketsphinxDidCompleteCalibration {
 	NSLog(@"Pocketsphinx calibration is complete.");
     [self.speechStatus setText:@"Calibration complete!"];
+    [[self speechLight] setImage:[UIImage imageNamed:@"speech_icon_on.png"]];
 }
 
 - (void) pocketsphinxDidStartListening {
 	NSLog(@"Pocketsphinx is now listening.");
-    [self.speechStatus setText:@"Go ahead. I'm listening ..."];
+    //[self.speechStatus setText:@"Go ahead. I'm listening ..."];
     self.speechRecognitionSwitch.enabled = YES;
+    speechMode = YES;
+    speechModeActive = NO;
 }
 
 
@@ -687,6 +772,42 @@ withFilterContext:(id)filterContext
 	NSLog(@"Setting up the continuous recognition loop has failed for some reason, please turn on OpenEarsLogging to learn more.");
 }
 
+//// ==== OPENEARS SPEECH SYNTHESIS METHODS ======= ////
+
+- (FliteController *)fliteController {
+	if (fliteController == nil) {
+		fliteController = [[FliteController alloc] init];
+	}
+	return fliteController;
+}
+
+- (Slt *)slt {
+	if (slt == nil) {
+		slt = [[Slt alloc] init];
+	}
+	return slt;
+}
+
+- (Kal16 *)kal {
+	if (kal == nil) {
+		kal = [[Kal16 alloc] init];
+	}
+	return kal;
+}
+
+- (Awb8k *)awb {
+	if (awb == nil) {
+		awb = [[Awb8k alloc] init];
+	}
+	return awb;
+}
+
+- (Rms *)rms {
+	if (rms == nil) {
+		rms = [[Rms alloc] init];
+	}
+	return rms;
+}
 
 
 @end
